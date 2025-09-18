@@ -12,7 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DMA4Sem.BLL\DMA4Sem.BLL.csproj" />
+    <ProjectReference Include="..\DMA4Sem.DAL\DMA4Sem.DAL.csproj" />
     <ProjectReference Include="..\DMA4Sem.Domain\DMA4Sem.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

@@ -10,9 +10,11 @@ namespace DMA4Sem.DAL
 {
     public class CustomerRepository : ICustomerRepository
     {
-        public Task<Customer> GetCustomer(int id)
+        public async Task<Customer> GetCustomer(int id)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Nu gemmer jeg i databasen: id {id}");
+            Customer result = new Customer();
+            return await Task.FromResult(result);
         }
     }
 }

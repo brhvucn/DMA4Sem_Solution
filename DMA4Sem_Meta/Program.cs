@@ -1,6 +1,15 @@
+using DMA4Sem.BLL;
+using DMA4Sem.BLL.Contracts;
+using DMA4Sem.DAL;
+using DMA4Sem.DAL.Contracts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//Vores DAL lag
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+//Vores BLL lag
+builder.Services.AddScoped<ICustomerFacade, CustomerFacade>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

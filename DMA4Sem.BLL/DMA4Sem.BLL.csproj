@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DMA4Sem.DAL\DMA4Sem.DAL.csproj" />
     <ProjectReference Include="..\DMA4Sem.Domain\DMA4Sem.Domain.csproj" />
-    <ProjectReference Include="..\DMA4Sem_Meta\DMA4Sem_Meta.csproj" />
   </ItemGroup>
 
 </Project>
