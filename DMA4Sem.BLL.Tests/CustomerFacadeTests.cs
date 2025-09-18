@@ -1,4 +1,5 @@
 ﻿using DMA4Sem.DAL.Contracts;
+using DMA4Sem.Domain.Models;
 
 namespace DMA4Sem.BLL.Tests
 {
@@ -14,19 +15,14 @@ namespace DMA4Sem.BLL.Tests
             Action act = () => customerFacade.GetCustomer(0);
             //assert
             var exception = Assert.ThrowsAny<Exception>(act);
-        }
 
-        [Fact]
-        public void TestGetCustomer_Invalid_Id_ExpectNull()
-        {
-            //arrange
-            ICustomerRepository testCustomerRepository = new FakeCustomerRepository();
-            CustomerFacade customerFacade = new CustomerFacade(testCustomerRepository);
-            //act
-            var result = customerFacade.GetCustomerNull(0);
-            //assert
-            Assert.Null(result);
-        }
+
+
+            Customer customer = Customer.CreateCustomer(1, "Kurt", "");
+            customer.Name = "Hans";
+
+
+        }        
     }
 
    

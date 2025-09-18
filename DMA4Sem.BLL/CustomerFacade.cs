@@ -25,17 +25,6 @@ namespace DMA4Sem.BLL
             //forretningslogik er her
             //hvis jeg når hertil er id ok
             return this.customerRepository.GetCustomer(id);
-        }
-
-        public Task<Customer> GetCustomerNull(int id)
-        {
-            if(id <= 0)
-            {
-                return null;
-            }
-            //forretningslogik er her
-            //hvis jeg når hertil er id ok
-            return this.customerRepository.GetCustomer(id);
-        }
+        }        
     }
 }
